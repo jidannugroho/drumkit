@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Set by Jidan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="drum-set.png" type="png">
+    <style>
+        body{
+            background-image: url('cool-background.png');
+            background-size: cover; 
+        }
+        .font{
+            font-family: "Audiowide", serif;
+            font-weight: 400;
+            font-style: normal;
+            
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        img{
+            margin-top: 3px;
+            height: 190px;
+            width: 190px;
+            margin: 10px;
+            
+            border-style: solid;
+            border-width: 2px;
+            border-color: gray;
+            border-radius: 20px;
+        }
+        
+        #footer{
+            margin-top: 140px;    
+        }
+
+    </style>
+</head>
+
+
+
+<body class="font">
+    <center>
+        <h1>Drum Kit</h1>
+        <div id="container">
+
+            
+            <div class="float">
+                <div>
+
+                    <img src="image/hihat.jpg" id="hihat" alt="">
+                </div>
+                <div>
+                    <h2>Hihat</h2>
+                    <h2>Key : A</h2>
+                </div>
+            </div>
+            <div class="float">
+                <div>
+                    <img src="image/floortom.jpg" id="floortom" alt="">
+                    
+                </div>
+                <div>
+                    <h2>Floorom</h2>
+                    <h2>Key : S</h2>
+                </div>
+            </div>
+
+            <div class="float">
+                <div>
+                    <img src="image/crash.jpg" id="crash" alt="">
+                    
+                </div>
+                <div>
+                    <h2>Crash</h2>
+                    <h2>Key : D</h2>
+                </div>
+            </div>
+            <div class="float">
+                <div>
+                    <img src="image/kick.jpg" id="kick" alt="">
+                    
+                </div>
+                <div>
+                    <h2>Kick</h2>
+                    <h2>Key : J</h2>
+                </div>
+            </div>
+            <div class="float">
+                <div>
+                    <img src="image/snare.jpg" id="snare" alt="">
+
+                </div>
+                <div>
+                    <h2>Snare</h2>
+                    <h2>Key : K</h2>
+                </div>
+            </div>
+            <div class="float">
+                <div>
+                    <img src="image/tom.jpg" id="tom" alt="">
+
+                </div>
+                <div>
+                    <h2>Tom</h2>
+                    <h2>Key : L</h2>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h5>@ 2025 by Jidan Nugroho</h5>
+        </div>
+    </center>
+    <script>
+        $("#hihat").click(function () {
+           var hihat = new Audio('audio/hihat.mp3'); 
+           hihat.play();     
+        });
+
+        $("#floortom").click(function () {
+           var floortom = new Audio('audio/floortom.mp3'); 
+           floortom.play();     
+        });
+
+        $("#crash").click(function () {
+           var crash = new Audio('audio/crash.mp3'); 
+           crash.play();     
+        });
+
+        $("#kick").click(function () {
+           var kick = new Audio('audio/kick.mp3'); 
+           kick.play();     
+        });
+
+        $("#snare").click(function () {
+           var snare = new Audio('audio/snare.mp3'); 
+           snare.play();     
+        });
+
+        $("#tom").click(function () {
+           var tom = new Audio('audio/tom.mp3'); 
+           tom.play();     
+        });
+
+        $(document).keydown(function () {
+            if (event.key == 'a') {
+                var hihat = new Audio('audio/hihat.mp3'); 
+                hihat.play(); 
+            }
+            else if (event.key == 'A') {
+                var hihat = new Audio('audio/hihat.mp3'); 
+                hihat.play(); 
+            }
+            else if (event.key == 's') {
+                var floortom = new Audio('audio/floortom.mp3'); 
+                    floortom.play(); 
+            }
+            else if (event.key == 'S') {
+                var floortom = new Audio('audio/floortom.mp3'); 
+                    floortom.play(); 
+            }
+            else if (event.key == 'd') {
+                var crash = new Audio('audio/crash.mp3'); 
+                crash.play();        
+            }
+            else if (event.key == 'D') {
+                var crash = new Audio('audio/crash.mp3'); 
+                crash.play();        
+            }
+            else if (event.key == 'j') {
+                var kick = new Audio('audio/kick.mp3'); 
+                kick.play(); 
+            }
+            else if (event.key == 'J') {
+                var kick = new Audio('audio/kick.mp3'); 
+                kick.play(); 
+            }
+            else if (event.key == 'k') {
+                var snare = new Audio('audio/snare.mp3'); 
+                snare.play();
+            }
+            else if (event.key == 'K') {
+                var snare = new Audio('audio/snare.mp3'); 
+                snare.play();
+            }
+            else if (event.key == 'l') {
+                var tom = new Audio('audio/tom.mp3'); 
+                tom.play();  
+            }
+            else if (event.key == 'L') {
+                var tom = new Audio('audio/tom.mp3'); 
+                tom.play();  
+            }
+            else{
+                
+            }
+        });
+    </script>
+</body>
+</html>
